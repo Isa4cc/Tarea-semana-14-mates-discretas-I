@@ -1,0 +1,52 @@
+//Función recursiva de invertir strings
+
+//Incluir librerías base necesarias para el funcionamiento de la función
+#include <stdio.h>
+#include <string.h>
+
+void invertirString(char cadena[100], int inicio, int fin)
+{
+    if(inicio>=fin){
+        return;
+    }
+    int temp = cadena[inicio];
+    cadena[inicio] = cadena[fin];
+    cadena[fin] = temp;
+    invertirString(cadena, inicio+1, fin-1);
+    
+    return 0;
+}
+
+//Función recursiva factorial
+
+//Incluir librería base necesaria para el funcionamiento de la función
+#include <stdio.h>
+
+int factorial(int n) {
+    if (n == 0 || n == 1) return 1; //Caso base, en donde el valor de n! es 1.
+    return n * factorial(n - 1);  //Caso recursivo, en donde el valor de n! depende del número n.
+} 
+/*
+* El funcionamiento de la función factorial, está formado por el auto llamado de
+* la misma función(función factorial), hasta llegar a un caso base, es decir,
+* hasta que llegue a n=1 o n=0.
+*/
+
+//Función recursiva Fibonacci
+
+//Incluir librería base necesaria para el funcionamiento de la función
+#include <stdio.h>
+
+int fibonacci(int n) {
+    if (n == 0) return 0;             // Caso base 1: Si n es 0, devuelve 0.
+    if (n == 1) return 1;             // Caso base 2: Si n es 1, devuelve 1.
+    return fibonacci(n - 1) + fibonacci(n - 2); // Llamadas recursivas.
+}
+
+/*
+* Igualmente, si el número ingresado no es el caso base n=1 o n=0 
+* (en los cuales el valor de la secuencia fibonacci es 1 y 0 respectivamente)
+* el retorno del programa será la fórmula de recurrencia para Fibonacci:
+* Ejemplo n=2:
+* 0+1+1+2
+*/
