@@ -13,8 +13,7 @@ void invertirString(char cadena[100], int inicio, int fin)
     cadena[inicio] = cadena[fin];
     cadena[fin] = temp;
     invertirString(cadena, inicio+1, fin-1);
-    
-    return 0;
+      
 }
 
 //Función recursiva factorial
