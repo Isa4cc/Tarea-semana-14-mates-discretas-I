@@ -6,6 +6,7 @@ NCR: 5535
 
 #include <stdio.h> //Librería estándar de entrada y salida
 #include "C:\Users\franc\C_FOLDER\SEM-14-MATES-DISC-I\Funciones.h.txt" //Librería de funciones recursivas
+#include <string.h>
 
 /*Función principal, la única que está presente en el código
 por optimización.
@@ -33,6 +34,14 @@ int main(){
         printf("4. Salir\n");
         printf("Opcion: ");
         scanf("%d", &opcion);
+
+        //Limpiar el buffer de entrada
+        /*
+        Hacer esto sirve por si leímos un valor int, float, double y
+        luego leemos un char, para evitar que "\n" lo interprete el
+        scanf como la cadena o caracter
+        */
+       getchar();
 
         /*
         Ahora, empezamos con la sentencia Switch-case, la cual hace que
@@ -91,8 +100,10 @@ int main(){
                 break;
             default:
                 printf("Opcion invalida. Intente de nuevo..\n"); //En caso de no ingresar un valor correcto, saldrá este mensaje en la consola
+            break;
         }
     }while(opcion != 4); //Con el bucle do-while se valida si reiniciar el programa o finalizarlo, si el usuario computa la opción 4.
 
     return 0; //Valor obligatorio de retorno en funciones int.
+
 }
