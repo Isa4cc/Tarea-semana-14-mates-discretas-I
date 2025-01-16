@@ -5,7 +5,7 @@ NCR: 5535
 */
 
 #include <stdio.h> //Librería estándar de entrada y salida
-#include "C:\Users\franc\C_FOLDER\SEM-14-MATES-DISC-I\Funciones.h.txt" //Librería de funciones recursivas
+#include ".\librerias\Funciones.h.txt" //Librería de funciones recursivas
 #include <string.h>
 
 /*Función principal, la única que está presente en el código
